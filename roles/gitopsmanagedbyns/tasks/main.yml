@@ -1,7 +1,7 @@
 ---
 - name: update or edit label argocd.argoproj.io/managed-by
   kubernetes.core.k8s:
-    state: present 
+    state: present
     definition:
       kind: Namespace
       metadata:

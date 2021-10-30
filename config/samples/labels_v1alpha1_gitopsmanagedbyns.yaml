@@ -1,3 +1,4 @@
+---
 apiVersion: labels.cmpf.schwarz/v1alpha1
 kind: GitOpsManagedByNS
 metadata:
