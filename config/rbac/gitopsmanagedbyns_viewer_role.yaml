@@ -1,0 +1,20 @@
+# permissions for end users to view gitopsmanagedbyns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: gitopsmanagedbyns-viewer-role
+rules:
+- apiGroups:
+  - labels.cmpf.schwarz
+  resources:
+  - gitopsmanagedbyns
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - labels.cmpf.schwarz
+  resources:
+  - gitopsmanagedbyns/status
+  verbs:
+  - get

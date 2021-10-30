@@ -1,0 +1,8 @@
+apiVersion: labels.cmpf.schwarz/v1alpha1
+kind: GitOpsManagedByNS
+metadata:
+  name: gitopsmanagedbyns-sample
+  namespace: test
+spec:
+  managedbyNS: default
+  test: test

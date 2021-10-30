@@ -1,0 +1,24 @@
+# permissions for end users to edit gitopsmanagedbyns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: gitopsmanagedbyns-editor-role
+rules:
+- apiGroups:
+  - labels.cmpf.schwarz
+  resources:
+  - gitopsmanagedbyns
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - labels.cmpf.schwarz
+  resources:
+  - gitopsmanagedbyns/status
+  verbs:
+  - get

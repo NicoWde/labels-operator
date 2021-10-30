@@ -1,0 +1,11 @@
+---
+- name: update or edit label argocd.argoproj.io/managed-by
+  kubernetes.core.k8s:
+    state: present 
+    definition:
+      kind: Namespace
+      metadata:
+        apiVersion: v1
+        name: '{{ ansible_operator_meta.namespace }}'
+        labels:
+          argocd.argoproj.io/managed-by: '{{ managedbyNS }}'
